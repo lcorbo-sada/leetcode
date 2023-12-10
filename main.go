@@ -6,20 +6,11 @@ import (
 
 func main() {
 	input := []int{2, 7, 11, 15}
-	output := twoSum(input, 9)
-	fmt.Println(output) // [0,1]
-}
-
-func twoSum(nums []int, target int) []int {
-	mymap := make(map[int]int)
-	for i := 0; i < len(nums); i++ {
-		j, ok := mymap[target-nums[i]]
-		if ok {
-			result := []int{j, i}
-			return result
-		}
-		mymap[nums[i]] = i
-	}
-	result := []int{-1, -1}
-	return result
+	target := 9
+	output := twoSum(input, target)
+	output2 := twoSum_2(input, target)
+	output3 := twoSum_3(input, target)
+	fmt.Println(output)  // [0,1]
+	fmt.Println(output2) // [0,1]
+	fmt.Println(output3) // [0,1]
 }
